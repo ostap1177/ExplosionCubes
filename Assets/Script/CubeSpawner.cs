@@ -56,8 +56,9 @@ public class CubeSpawner : MonoBehaviour
             }
 
             _explosion.BlowingChildCube(_transform.position);
-            _cube.DestroyCube();
         }
+
+         _cube.DestroyCube();
     }
 
     private Material ChangeColor()

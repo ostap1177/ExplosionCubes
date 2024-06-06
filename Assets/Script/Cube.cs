@@ -6,6 +6,7 @@ public class Cube : MonoBehaviour
     private Transform _transform;
 
     public event UnityAction<Transform> Clecked;
+
     public int CountSplit { get; private set; }
 
     private void Awake()

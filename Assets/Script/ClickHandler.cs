@@ -6,7 +6,7 @@ public class ClickHandler : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) == true)
+        if (Input.GetMouseButtonDown(0))
         {
             if (TryGetHitCube(out Cube cubeHit)) 
             {

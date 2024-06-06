@@ -20,33 +20,8 @@ public class Explosion : MonoBehaviour
         }
     }
 
-    public void BlowingCube(Vector3 explosionPosition, int explosionMultiplier)
-    {
-        foreach (Rigidbody explodableCube in GetExplosionCubes(explosionPosition, explosionMultiplier))
-        {
-            explodableCube.AddExplosionForce(_forceExplsion * explosionMultiplier, explosionPosition, _radiusExplosion * explosionMultiplier);
-        }
-    }
-
     public void SetChildCubesExplosion(Cube cube)
     { 
         _cubes.Add(cube);
-    }
-
-    private List<Rigidbody> GetExplosionCubes(Vector3 explosionPosition , int radiusMultiplier)
-    {
-        Collider[] overlappedColliders = Physics.OverlapSphere(explosionPosition, _radiusExplosion * radiusMultiplier);
-      
-        List<Rigidbody> cubes = new List<Rigidbody>();
-
-        foreach (Collider collider in overlappedColliders)
-        {
-            if (collider.attachedRigidbody != null)
-            {
-                cubes.Add(collider.attachedRigidbody);
-            }
-        }
-
-        return cubes;
     }
 }

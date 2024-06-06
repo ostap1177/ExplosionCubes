@@ -457,12 +457,31 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2478131977265142234, guid: d42e10ad667d8dd43bd68c7cc9d9af1c, type: 3}
   m_PrefabInstance: {fileID: 7599643249140053884}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1569091693}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77de22002ac0acc4ea8921686ca96eea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1569091693 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4485855893675236368, guid: d42e10ad667d8dd43bd68c7cc9d9af1c, type: 3}
+  m_PrefabInstance: {fileID: 7599643249140053884}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1569091701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569091693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e292b8f85dcf7684fa2cd2a35a82a670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxValueToChance: 10
+  _maxChanceValue: 20
 --- !u!1001 &1684180626
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -751,6 +770,10 @@ PrefabInstance:
       propertyPath: _explosion
       value: 
       objectReference: {fileID: 1086010931}
+    - target: {fileID: 2786897369323004707, guid: d42e10ad667d8dd43bd68c7cc9d9af1c, type: 3}
+      propertyPath: _chanceCounter
+      value: 
+      objectReference: {fileID: 1569091701}
     - target: {fileID: 4485855893675236368, guid: d42e10ad667d8dd43bd68c7cc9d9af1c, type: 3}
       propertyPath: m_Name
       value: Cube
@@ -798,7 +821,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4485855893675236368, guid: d42e10ad667d8dd43bd68c7cc9d9af1c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1569091701}
   m_SourcePrefab: {fileID: 100100000, guid: d42e10ad667d8dd43bd68c7cc9d9af1c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

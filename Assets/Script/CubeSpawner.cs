@@ -39,7 +39,7 @@ public class CubeSpawner : MonoBehaviour
 
     private void CreateCubes(Vector3 scale)
     {
-        if (_chanceCounter.IsCreatedChance() == true)
+        if (_chanceCounter.IsCreatedChance())
         {
             _countCreate = _cube.CountSplit;
             _countCreate++;
@@ -51,10 +51,11 @@ public class CubeSpawner : MonoBehaviour
                 Cube cube = Instantiate(_prefabCube, _transform.position, Quaternion.identity);
                 cube.transform.localScale = scale / _splitterCube;
                 cube.SetCountSplit(_countCreate);
-                cube.gameObject.GetComponent<Renderer>().material = ChangeColor();
+                cube.GetComponent<Renderer>().material = ChangeColor();
+                _explosion.SetChildCubesExplosion(cube);
             }
 
-            _explosion.BlowingCube(_transform.position);
+            _explosion.BlowingChildCube(_transform.position);
             _cube.DestroyCube();
         }
     }

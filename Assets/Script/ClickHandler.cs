@@ -8,14 +8,14 @@ public class ClickHandler : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) == true)
         {
-            if (GetHitCube(out Cube cubeHit)) 
+            if (TryGetHitCube(out Cube cubeHit)) 
             {
                 cubeHit.ClickOn();
             }
         }
     }
 
-    private bool GetHitCube(out Cube cubeHit)
+    private bool TryGetHitCube(out Cube cubeHit)
     {
         cubeHit = null;
 
